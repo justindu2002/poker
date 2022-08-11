@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Deck from "./deck.js"
+
+const deck = new Deck()
+console.log(deck.cards)
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <a>
+          Poker Yay
         </a>
       </header>
     </div>
   );
 }
+
+//Testing 
 
 export default App;

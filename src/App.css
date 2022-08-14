@@ -1,15 +1,191 @@
-.App {
-  text-align: center;
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  display: grid;
+  grid-template-columns: 6rem 6rem 6rem 6rem 6rem 6rem 6rem 6rem 6rem 6rem;
+  grid-template-rows: 10.5rem 10.5rem 10.5rem 10.5rem;
+  background-color: #35654d;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.deck {
+  height: 5000%;
+  width: 100%;
+  border: 1px solid black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: .5rem;
+  color: #6CB3A9;
+  user-select: none;
 }
 
 
-.App-header {
-  background-color: #35654d;
-  min-height: 100vh;
+.computer-deck {
+  background-color: red;
+}
+
+.player-deck {
+  background-color: white;
+}
+
+/* .card {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: .5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 4rem;
+} */
+
+
+.reference {
+  height: 176px;
+  width: 126px;
+  padding: 20px;
+  margin: 50px;
+  border: 2px solid black;
+  background-color: #6CB3A9;
+  border-radius: .5rem;
+  position:fixed; 
+  left:150px; 
+  top:250px;
+}
+
+.myCardOne {
+  height: 176px;
+  width: 126px;
+  padding: 20px;
+  margin: 50px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: .5rem;
+  position:fixed; 
+  left:625px; 
+  top:500px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myCardOne.red {
+  color: red;
+}
+
+.myCardOne.black {
+  color: black;
+}
+
+.myCardOne::before,
+.myCardOne::after{
+  position: absolute;
+  content: attr(data-value);
+  font-size: 1rem;
+}
+.myCardOne::before {
+  top: .5rem;
+  left: .5rem
+}
+
+.myCardOne::after {
+  bottom: .5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
+
+
+.myCardTwo {
+  height: 176px;
+  width: 126px;
+  padding: 20px;
+  margin: 50px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: .5rem;
+  position:fixed; 
+  left:775px; 
+  top:500px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myCardTwo.red {
+  color: red;
+}
+
+.myCardTwo.black {
+  color: black;
+}
+
+.myCardTwo::before,
+.myCardTwo::after{
+  position: absolute;
+  content: attr(data-value);
+  font-size: 1rem;
+}
+.myCardTwo::before {
+  top: .5rem;
+  left: .5rem
+}
+
+.myCardTwo::after {
+  bottom: .5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
+
+/* Card Design */
+
+.lightRed {
+  position: absolute;
+  top: 35%;
+  left: 14.8%;
+  width: 100px;
+  height: 45px;
+  background: #D25B70;
+  border-radius: 50%;
+  margin: 50px auto;
+  border-radius: 150px 150px 0 0;
+
+}
+.white {
+  position: absolute;
+  top: 41.7%;
+  left: 14.8%;
+  width: 100px;
+  height: 45px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin: 50px auto;
+  border-radius: 150px 150px 0 0;
+  transform: rotate(180deg);
+}
+.darkRed {
+  position: absolute;
+  top: 46.6%;
+  left: 15.25%;
+  height: 9.5px;
+ width: 87.5px;
+  background-color: #781728;
+}
+.circle::after{
+  position: absolute;
+  top:47%;
+   left: 18.25%;
+  content:"";
+  background: #F6DF96;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+transform: translate(-50%, -50%);
+  border: 5px solid #781728;
 }
